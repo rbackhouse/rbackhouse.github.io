@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Maximum MPD</title>
+
+    <link rel="stylesheet" href="stylesheets/minimal_styles.css">
+    <link rel="stylesheet" href="stylesheets/minimal_pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Maximum MPD</h1>
+        <p>React Native based MPD Client for iOS</em></p>
+		<h3><em><a href="#welcome">Welcome</a></em></h3>
+		<h3><em><a href="#playing">Playing</a></em></h3>
+        <h3><em><a href="#browse">Browse</a></em></h3>
+        <h3><em><a href="#search">Search</a></em></h3>
+        <h3><em><a href="#files">Files</a></em></h3>
+        <h3><em><a href="#settings">Settings</a></em></h3>
+        <h3><em><a href="#createplaylists">Creating Playlists</a></em></h3>
+      </header>
+      <section>
+        <h1>Usage Guide</h1>
+
+        <p><em>Maximum MPD is a full function MPD Client for iOS</em></p>
+        <p><strong>Features:</strong></p>
+		<ul>
+			<li>Random Playlist generation</li>
+			<li>Multiple connections</li>
+			<li>Server Discovery via Bonjour</li>
+			<li>Artist, Album and Song Browser</li>
+			<li>File Browser</li>
+			<li>Quickly search for artists, albums and songs</li>
+			<li>Output Selection</li>
+			<li>Quickly create and edit playlists</li>
+			<li>AlbumArt support if MPD version >= 0.21</li>       
+        </ul>       
+        
+        <p><strong>Requirements:</strong></p>
+        
+        <p>An MPD Server running in your home network. See <a href="http://www.musicpd.org/">http://www.musicpd.org</a> for more details</p>
+
+        <h2 id="welcome">Welcome Screen</h2>
+        <p>This is the initial screen when first loading the App. You can connect to configured or discovered MPD servers or add new ones/delete existing ones</p>
+        
+		<img src="images/welcome.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+
+        <h2 id="playing">Play Screen</h2>
+        <p>The Play Screen has 3 tabs:</p>
+		<ul>
+			<li>Currently Playing Song (change the volume, change the song position and play/pause, stop, previous and next commands)</li>
+			<li>Queue Management (control the selected song, create a random playlist of 50</li>
+			<li>Playlist Management (view edit and create playlists)</li>
+		</ul>
+
+        <p><strong><em>Playing:</strong></em></p>
+		<img src="images/playing.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        <p><strong><em>Playing Queue:</strong</em></p>
+		<img src="images/playqueue.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        <p><strong><em>PlayLists:</strong></em></p>
+		<img src="images/playlists.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+		
+        <h2 id="browse">Browse Screen</h2>
+        <p>Drill down into Artists, Albums and Songs and add them to the queue or a playlist</p>
+        
+        <p><strong><em>Artists:</strong></em></p>
+		<img src="images/artists.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <p><strong><em>Albums:</strong></em></p>
+		<img src="images/albums.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <p><strong><em>Songs:</strong></em></p>
+		<img src="images/songs.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <h2 id="search">Search Screen</h2>
+        <p>Search for Artists, Albums and Songs</p>
+        
+        <p><strong><em>Search:</strong></em></p>
+		<img src="images/search.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <h2 id="files">Files Screen</h2>
+        <p>Drill down into the files found in the MPD database</p>
+        
+        <p><strong><em>Files:</strong></em></p>
+		<img src="images/files.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <h2 id="settings">Settings Screen</h2>
+        <p>Select different connections and other MPD settings such as Outputs, Album Art, Shuffle, Repeat etc</p>
+
+        <p><strong><em>Settings:</strong></em></p>
+		<img src="images/settings.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+        
+        <h2 id="createplaylists">Creating Playlists</h2>
+
+        <p>Playlists can be added to when browsing songs or files. If there is no currently active playlist set you will be prompted to create one.</p> 
+        <p>Alternatively you can select an existing one in on the Playing screen using the "Set Active" button.</p>
+        
+        <p><strong>Playlist Details screen:</strong></p>
+		<img src="images/playlist1.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+
+        <p><strong>Setting the Playlist name:</strong></p>
+		<img src="images/setplaylistname.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+		
+        <p><strong>Add songs to the queue or active playlist by swiping left:</strong></p>
+		<img src="images/addsong.png" style="width:300px;height:534px;border:1px solid black;"/>
+		<p></p>
+		
+      </section>
+      <footer>
+        <p class="view"><a href="https://github.com/rbackhouse/MaximumMPD">View the Project on GitHub <small>rbackhouse/MaximumMPD</small></a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
