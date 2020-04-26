@@ -24,6 +24,7 @@
         <h3><em><a href="#files">Files</a></em></h3>
         <h3><em><a href="#settings">Settings</a></em></h3>
         <h3><em><a href="#createplaylists">Creating Playlists</a></em></h3>
+        <h3><em><a href="#albumart">Album Art</a></em></h3>
         <h3><em><a href="#privacy">Privacy/Contact</a></em></h3>
       </header>
       <section>
@@ -123,6 +124,15 @@
         <p><strong>Add songs to the queue or active playlist by swiping left:</strong></p>
 		<img src="images/addsong.png" style="width:300px;height:534px;border:1px solid black;"/>
 		<p></p>
+
+        <h2 id="albumart">Album Art</h2>
+        <p>Support for Album Art is provided via 2 options</p>
+        <ul>
+			<li>The Connected MPD server is Version 2.1 or greater</li>
+			<li>Using a separate HTTP file server. It will work if the server is running on the same machine as the MPD server and either the MPD server has discovery turned on (zeroconf_enabled) or the MPD connection is configured using an IP address. See <a href="https://github.com/rbackhouse/MPDAlbumArtServer">MPDAlbumArtServer</a> for an example file server</li>
+		</ul>
+        <img src="images/albumart.png" style="width:300px;height:534px;border:1px solid black;"/>
+        <p></p>
 
         <h2 id="privacy">Privacy/Contact</h2>
 		<h3><strong><em>Information Collection And Use</strong></em></h3>
