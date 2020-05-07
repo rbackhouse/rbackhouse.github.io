@@ -134,7 +134,7 @@
         <img src="images/albumart.png" style="width:300px;height:534px;border:1px solid black;"/>
         <p></p>
 
-        <p>Configuration example for an HTTP File server like Apache HTTP Server</p>
+        <h3>Configuration example for an HTTP File server like Apache HTTP Server</h3>
         <p>If the configured port is 80, the Document Root is set to "/var/www/html", the album art files are stored in a directory called "coverart" (full path is "/var/www/html/coverart" and the name of the files are "config.jpg"</p>
         <ul>
             <li>Set the HTTP port configuration value to 80</li>
@@ -144,21 +144,33 @@
 
         <p>The URL will be assembled as follows</p>
 
-        <p>http://[IP address of MPD server]:[Configured HTTP Port][Configured URL Prefix]/[Music DB directory structure]/[Configured Album Art filename]</p>
+        <pre><code>http://[IP address of MPD server]:[Configured HTTP Port][Configured URL Prefix]/[Music DB directory structure]/[Configured Album Art filename]</code></pre>
 
         <p>e.g</p>
-        <p>http://192.168.1.1:80/coverart/James/The%20Best%20Of/cover.jpg</p>
+        <pre><code>http://192.168.1.1:80/coverart/James/The%20Best%20Of/cover.jpg</code></pre>
 
         <p>Note: the directory structure under "/var/www/html/coverart" must be the same as your Music Database directory structure</p>
 
-        <p>An example of how to copy all cover.jpg files from your Music DB is:</p>
+        <h3>An example of how to copy all cover.jpg files from your Music DB is:</h3>
         <ul>
             <li>Change directory to where your Music DB root is</li>
-			<li>run the command "find . -name 'cover.jpg' -exec cp --parents \{\} /var/www/html/coverart \;"</li>
+			<li>Run the command <pre><code>find . -name 'cover.jpg' -exec cp --parents \{\} /var/www/html/coverart \;</code></pre></li>
 		</ul>
 
+        <h3>Configuration example for NGINX</h3>
 
-        <p></p>
+        <pre><code>server {
+
+listen *:8080;
+
+    location /coverart/ {
+       root /media; # modify to fit your music directory
+       rewrite /coverart/(.*) /$1 break;
+       allow   192.168.178.0/24; # modify to fit to your network
+       deny    all;
+       autoindex on;
+   }
+}</code></pre>
 
         <h2 id="privacy">Privacy/Contact</h2>
 		<h3><strong><em>Information Collection And Use</strong></em></h3>
