@@ -126,15 +126,18 @@
 		<p></p>
 
         <h2 id="albumart">Album Art</h2>
-        <p>Support for Album Art is provided via 2 options</p>
+        <p>Support for Album Art is provided via 3 options</p>
         <ul>
 			<li>The Connected MPD server is Version 2.1 or greater</li>
-			<li>Using a separate HTTP file server. It will work if the server is running on the same machine as the MPD server and either the MPD server has discovery turned on (zeroconf_enabled) or the MPD connection is configured using an IP address. See <a href="https://github.com/rbackhouse/MPDAlbumArtServer">MPDAlbumArtServer</a> for an example file server</li>
+            <img src="images/albumart1.png" style="width:300px;height:650px;border:1px solid black;"/>
+			<li>Using a separate HTTP file server. See <a href="https://github.com/rbackhouse/MPDAlbumArtServer">MPDAlbumArtServer</a> for an example file server</li>
+            <img src="images/albumart2.png" style="width:300px;height:650px;border:1px solid black;"/>
+            <li>Downloading from an available UPnP Media server.</li>
+            <img src="images/albumart3.png" style="width:300px;height:650px;border:1px solid black;"/>
 		</ul>
-        <img src="images/albumart.png" style="width:300px;height:534px;border:1px solid black;"/>
         <p></p>
 
-        <h3>Configuration example for an HTTP File server like Apache HTTP Server</h3>
+        <h3 id="albumarthttp">Configuration example for an HTTP File server like Apache HTTP Server</h3>
         <p>If the configured port is 80, the Document Root is set to "/var/www/html", the album art files are stored in a directory called "coverart" (full path is "/var/www/html/coverart" and the name of the files are "config.jpg"</p>
         <ul>
             <li>Set the HTTP port configuration value to 80</li>
@@ -144,7 +147,7 @@
 
         <p>The URL will be assembled as follows</p>
 
-        <pre><code>http://[IP address of MPD server]:[Configured HTTP Port][Configured URL Prefix]/[Music DB directory structure]/[Configured Album Art filename]</code></pre>
+        <pre><code>http://[IP address of HTTP server]:[Configured HTTP Port][Configured URL Prefix]/[Music DB directory structure]/[Configured Album Art filename]</code></pre>
 
         <p>e.g</p>
         <pre><code>http://192.168.1.1:80/coverart/James/The%20Best%20Of/cover.jpg</code></pre>
